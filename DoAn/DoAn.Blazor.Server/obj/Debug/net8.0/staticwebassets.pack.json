@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\DevExperss\\DoAn\\DoAn.Blazor.Server\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\DevExperss\\DoAn\\DoAn.Blazor.Server\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\DevExperss\\DoAn\\DoAn.Blazor.Server\\wwwroot\\images\\Logo.svg",
+      "PackagePath": "staticwebassets\\images\\Logo.svg"
+    },
+    {
+      "Id": "D:\\DevExperss\\DoAn\\DoAn.Blazor.Server\\wwwroot\\images\\SplashScreen.svg",
+      "PackagePath": "staticwebassets\\images\\SplashScreen.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DoAn.Blazor.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DoAn.Blazor.Server.props",
+      "PackagePath": "build\\DoAn.Blazor.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DoAn.Blazor.Server.props",
+      "PackagePath": "buildMultiTargeting\\DoAn.Blazor.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DoAn.Blazor.Server.props",
+      "PackagePath": "buildTransitive\\DoAn.Blazor.Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

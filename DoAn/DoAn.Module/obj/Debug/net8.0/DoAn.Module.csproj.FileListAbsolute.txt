@@ -1,0 +1,15 @@
+D:\DevExperss\DoAn\DoAn.Module\bin\Debug\net8.0\DoAn.Module.deps.json
+D:\DevExperss\DoAn\DoAn.Module\bin\Debug\net8.0\DoAn.Module.dll
+D:\DevExperss\DoAn\DoAn.Module\bin\Debug\net8.0\DoAn.Module.pdb
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\DoAn.Module.csproj.AssemblyReference.cache
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\DoAn.Module.GeneratedMSBuildEditorConfig.editorconfig
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\DoAn.Module.AssemblyInfoInputs.cache
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\DoAn.Module.AssemblyInfo.cs
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\DoAn.Module.csproj.CoreCompileInputs.cache
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\DoAn.Module.dll
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\refint\DoAn.Module.dll
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\DoAn.Module.pdb
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\ref\DoAn.Module.dll
+D:\DevExperss\DoAn\DoAn.Module\bin\Debug\net8.0\DevExpress.ExpressApp.Blazor.v24.1.dll
+D:\DevExperss\DoAn\DoAn.Module\bin\Debug\net8.0\DevExpress.ExpressApp.Blazor.v24.1.xml
+D:\DevExperss\DoAn\DoAn.Module\obj\Debug\net8.0\DoAn.Mod.FA6D83EB.Up2Date
