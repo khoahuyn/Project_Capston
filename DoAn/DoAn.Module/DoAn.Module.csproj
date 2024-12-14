@@ -16,6 +16,7 @@
     <None Remove="Images\coso.svg" />
     <None Remove="Images\database-save.svg" />
     <None Remove="Images\dexuat.svg" />
+    <None Remove="Images\dxmoi.svg" />
     <None Remove="Images\file.svg" />
     <None Remove="Images\import.svg" />
     <None Remove="Images\mauvb.svg" />
@@ -33,6 +34,7 @@
     <EmbeddedResource Include="Images\coso.svg" />
     <EmbeddedResource Include="Images\database-save.svg" />
     <EmbeddedResource Include="Images\dexuat.svg" />
+    <EmbeddedResource Include="Images\dxmoi.svg" />
     <EmbeddedResource Include="Images\file.svg" />
     <EmbeddedResource Include="Images\import.svg" />
     <EmbeddedResource Include="Images\mauvb.svg" />

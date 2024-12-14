@@ -1,6 +1,8 @@
 ﻿using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.ConditionalAppearance;
 using DevExpress.ExpressApp.DC;
+using DevExpress.ExpressApp.Editors;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
@@ -20,6 +22,8 @@ namespace DoAn.Module.BusinessObjects.Class
     [ImageName("nhanvien")]
     [DefaultProperty("EmployeeId")]
     [DefaultListViewOptions(MasterDetailMode.ListViewOnly, true, NewItemRowPosition.Top)]
+    [DeferredDeletion(false)]
+
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
     public class Employee(Session session) : BaseObject(session)
@@ -99,10 +103,19 @@ namespace DoAn.Module.BusinessObjects.Class
             set { SetPropertyValue<string>(nameof(Signature), ref _Signature, value); }
         }
 
+        private bool _IsCoso = false;
+        [ImmediatePostData, Browsable(false)]
+        public bool IsCoso
+        {
+            get { return _IsCoso; }
+            set { SetPropertyValue<bool>(nameof(IsCoso), ref _IsCoso, value); }
+        }
+
 
         private Branch _branch;
-        [XafDisplayName("Cơ Sở")]
+        [XafDisplayName("Cơ Sở (*)")]
         //[RuleRequiredField(DefaultContexts.Save, CustomMessageTemplate = "'Cơ Sở' không được để trống!")]
+        [Appearance("cs", Visibility = ViewItemVisibility.Hide, Criteria = "!IsCoso", Context = "DetailView")]
 
         [Association]
         public Branch branch
@@ -115,8 +128,10 @@ namespace DoAn.Module.BusinessObjects.Class
 
 
         private Department _department;
-        [XafDisplayName("Bộ Phận")]
+        [XafDisplayName("Bộ Phận (*)")]
         //[RuleRequiredField(DefaultContexts.Save, CustomMessageTemplate = "'Bộ Phận' không được để trống!")]
+        [DataSourceCriteria("[Nhan] = true")]
+        [Appearance("bp", Visibility = ViewItemVisibility.Hide, Criteria = "IsCoso", Context = "DetailView")]
 
         [Association]
         public Department department

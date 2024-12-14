@@ -42,6 +42,20 @@ namespace DoAn.Module.BusinessObjects.Class
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
 
+        protected override void OnSaving()
+        {
+            base.OnSaving();
+            if (string.IsNullOrEmpty(Name))
+            {
+                if (templateform != null)
+                {
+                    Name = templateform.FormName;
+                }
+
+            }
+            //UpdateTrangthai();
+        }
+
         private DateTime _Date;
         [XafDisplayName("Ngày Đề Xuất"), ModelDefault("AllowEdit", "false")]
         [ModelDefault("EditMask", "dd/MM/yyyy HH:mm")]
@@ -95,6 +109,7 @@ namespace DoAn.Module.BusinessObjects.Class
             set { SetPropertyValue<string>(nameof(Content), ref _Content, value); }
         }
 
+        
 
         [Association]
         public XPCollection<Sharing> Sharings
