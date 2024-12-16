@@ -20,6 +20,8 @@ namespace DoAn.Module.BusinessObjects.Class
     [ImageName("steps")]
     [DefaultProperty("Step")]
     [DefaultListViewOptions(MasterDetailMode.ListViewOnly, true, NewItemRowPosition.Top)]
+    [DeferredDeletion(false)]
+
     //[Persistent("DatabaseTableName")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
     public class ApprovalProcess(Session session) : BaseObject(session)
@@ -42,8 +44,6 @@ namespace DoAn.Module.BusinessObjects.Class
 
         private int _DayLeft;
         [XafDisplayName("Số Ngày Duyệt")]
-        //[ModelDefault("DisPlayFormat", "{0:dd/MM/yyyy}")]
-        //[ModelDefault("EditMask", "{0:dd/MM/yyyy}")]
         public int DayLeft
         {
             get { return _DayLeft; }
@@ -51,15 +51,17 @@ namespace DoAn.Module.BusinessObjects.Class
         }
 
 
-        private Role _role;
-        [XafDisplayName("Người Duyệt")]
-        [Association]
 
-        public Role role
+        private Execute _execute;
+        [Association]
+        [XafDisplayName("Người duyệt")]
+
+        public Execute execute
         {
-            get { return _role; }
-            set { SetPropertyValue<Role>(nameof(role), ref _role, value); }
+            get { return _execute; }
+            set { SetPropertyValue<Execute>(nameof(execute), ref _execute, value); }
         }
+
 
 
 

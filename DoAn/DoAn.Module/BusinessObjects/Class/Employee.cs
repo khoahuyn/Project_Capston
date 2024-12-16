@@ -125,8 +125,6 @@ namespace DoAn.Module.BusinessObjects.Class
         }
 
 
-
-
         private Department _department;
         [XafDisplayName("Bộ Phận (*)")]
         //[RuleRequiredField(DefaultContexts.Save, CustomMessageTemplate = "'Bộ Phận' không được để trống!")]
@@ -139,19 +137,6 @@ namespace DoAn.Module.BusinessObjects.Class
             get { return _department; }
             set { SetPropertyValue(nameof(department), ref _department, value); }
         }
-
-
-        private Role _role;
-        [XafDisplayName("Vai Trò")]
-        //[RuleRequiredField(DefaultContexts.Save, CustomMessageTemplate = "'Vai Trò' không được để trống!")]
-
-        [Association]
-        public Role role
-        {
-            get { return _role; }
-            set { SetPropertyValue<Role>(nameof(role), ref _role, value); }
-        }
-
 
 
         [Association]
@@ -179,15 +164,6 @@ namespace DoAn.Module.BusinessObjects.Class
         {
             get { return GetCollection<ProposalForm>(nameof(ProposalForms)); }
         }
-
-
-
-        [Association]
-        public XPCollection<TemplateForm> TemplateForms
-        {
-            get { return GetCollection<TemplateForm>(nameof(TemplateForms)); }
-        }
-
 
         [Association]
         public XPCollection<Comments> Comments

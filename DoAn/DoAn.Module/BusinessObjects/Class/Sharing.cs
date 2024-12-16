@@ -17,6 +17,7 @@ namespace DoAn.Module.BusinessObjects.Class
     [DefaultClassOptions]
     [System.ComponentModel.DisplayName("Chia Sẻ")]
     [NavigationItem(false)]
+    [DeferredDeletion(false)]
     [ImageName("share")]
     [DefaultProperty("Comments")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, true, NewItemRowPosition.Top)]

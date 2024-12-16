@@ -65,11 +65,11 @@
     <DetailView Id="Employee_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="21.428571428571427">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="20.53941908713693">
             <LayoutGroup Id="Employee" Caption="Nhân Sự" RelativeSize="100">
               <LayoutGroup Id="Employee_col1" RelativeSize="49.882075471698116">
-                <LayoutItem Id="EmployeeId" RelativeSize="17.333333333333332" />
-                <LayoutItem Id="Name" RelativeSize="24" />
+                <LayoutItem Id="EmployeeId" RelativeSize="24" />
+                <LayoutItem Id="Name" RelativeSize="17.333333333333332" />
                 <LayoutItem Id="PhoneNumber" RelativeSize="17.333333333333332" />
                 <LayoutItem Id="Gender" RelativeSize="17.333333333333332" />
                 <LayoutItem Id="Email" RelativeSize="24" />
@@ -78,12 +78,11 @@
                 <LayoutItem Id="Avatar" RelativeSize="24" />
                 <LayoutItem Id="Signature" RelativeSize="17.333333333333332" />
                 <LayoutItem Id="branch" RelativeSize="17.333333333333332" />
-                <LayoutItem Id="department" RelativeSize="17.333333333333332" />
-                <LayoutItem Id="role" RelativeSize="24" />
+                <LayoutItem Id="department" RelativeSize="41.333333333333336" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <TabbedGroup Id="Tabs" RelativeSize="78.57142857142857">
+          <TabbedGroup Id="Tabs" RelativeSize="79.46058091286307">
             <LayoutGroup Id="Sharings" RelativeSize="100" Caption="Chia Sẻ">
               <LayoutItem Id="Sharings" RelativeSize="100" />
             </LayoutGroup>
@@ -93,16 +92,29 @@
             <LayoutGroup Id="ProposalApprovals" RelativeSize="100" Caption="Duyệt Đề Xuất">
               <LayoutItem Id="ProposalApprovals" RelativeSize="100" />
             </LayoutGroup>
-            <LayoutGroup Id="ProposalForms" RelativeSize="100" Caption="Mẫu Đề Xuất">
+            <LayoutGroup Id="ProposalForms" RelativeSize="100" Caption="Đề Xuất">
               <LayoutItem Id="ProposalForms" RelativeSize="100" />
-            </LayoutGroup>
-            <LayoutGroup Id="TemplateForms" RelativeSize="100" Caption="Mẫu Đơn">
-              <LayoutItem Id="TemplateForms" RelativeSize="100" />
             </LayoutGroup>
             <LayoutGroup Id="Comments" RelativeSize="100" Caption="Bình Luận">
               <LayoutItem Id="Comments" RelativeSize="100" />
             </LayoutGroup>
           </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Execute_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="9.95850622406639">
+            <LayoutGroup Id="Execute" RelativeSize="100">
+              <LayoutItem Id="RoleName" RelativeSize="37.5" />
+              <LayoutItem Id="RoleNumber" RelativeSize="27.083333333333332" />
+              <LayoutItem Id="CodeCK" RelativeSize="35.416666666666664" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="TemplateForms_Group" Caption="Mẫu Đơn" Direction="Vertical" RelativeSize="90.04149377593362">
+            <LayoutItem Id="TemplateForms" RelativeSize="100" />
+          </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
@@ -145,7 +157,6 @@
       <Columns>
         <ColumnInfo Id="Step" Width="168" />
         <ColumnInfo Id="DayLeft" Width="144" />
-        <ColumnInfo Id="role" Width="220" />
       </Columns>
     </ListView>
     <ListView Id="TemplateForm_DepartmentForms_ListView">
@@ -156,23 +167,33 @@
     <DetailView Id="TemplateForm_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="18.26792963464141">
-            <LayoutGroup Id="TemplateForm" RelativeSize="100">
-              <LayoutGroup Id="TemplateForm_col1" RelativeSize="49.92784992784993">
-                <LayoutItem Id="FormName" RelativeSize="36.170212765957444" />
-                <LayoutItem Id="Thuchien" RelativeSize="27.659574468085108" />
-                <LayoutItem Id="Huy" RelativeSize="36.170212765957444" />
+          <LayoutGroup Id="SimpleEditors" RelativeSize="34.912043301759134">
+            <LayoutGroup Id="TemplateForm" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="TemplateForm_col1" RelativeSize="100">
+                <TabbedGroup Id="Item2" CaptionLocation="Top" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Mẫu Đơn" IsNewNode="True">
+                    <LayoutItem Id="FormName" ViewItem="FormName" Index="0" RelativeSize="20.987654320987655" IsNewNode="True" />
+                    <LayoutItem Id="Thuchien" ViewItem="Thuchien" Index="1" RelativeSize="16.049382716049383" IsNewNode="True" />
+                    <LayoutItem Id="Huy" ViewItem="Huy" Index="2" RelativeSize="16.049382716049383" IsNewNode="True" />
+                    <LayoutItem Id="category" ViewItem="category" Index="3" RelativeSize="16.049382716049383" IsNewNode="True" />
+                    <LayoutItem Id="employee" ViewItem="employee" Index="4" RelativeSize="9.876543209876543" IsNewNode="True" />
+                    <LayoutItem Id="execute" ViewItem="execute" Index="5" RelativeSize="20.987654320987655" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Direction="Vertical" Index="1" RelativeSize="100" Caption="Nội Dung" IsNewNode="True">
+                    <LayoutItem Id="Content" ViewItem="Content" Index="0" RelativeSize="100" IsNewNode="True" />
+                  </LayoutGroup>
+                </TabbedGroup>
+                <LayoutItem Id="Huy" RelativeSize="23.28767123287671" Index="1" Removed="True" />
+                <LayoutItem Id="FormName" RelativeSize="36.170212765957444" Removed="True" />
+                <LayoutItem Id="Thuchien" RelativeSize="20" Removed="True" />
               </LayoutGroup>
-              <LayoutGroup Id="TemplateForm_col2" RelativeSize="50.07215007215007">
-                <LayoutItem Id="category" RelativeSize="36.170212765957444" />
-                <LayoutItem Id="employee" RelativeSize="63.829787234042556" />
+              <LayoutGroup Id="TemplateForm_col2" RelativeSize="50.073855243722306" Caption="TemplateForm_col2" Removed="True">
+                <LayoutItem Id="employee" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="category" RelativeSize="23.28767123287671" Removed="True" />
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="SizeableEditors" RelativeSize="40.8660351826793">
-            <LayoutItem Id="Content" RelativeSize="100" />
-          </LayoutGroup>
-          <TabbedGroup Id="Tabs" RelativeSize="40.8660351826793">
+          <TabbedGroup Id="Tabs" RelativeSize="65.08795669824086" Index="1">
             <LayoutGroup Id="ProposalForms" Caption="Đề Xuất" RelativeSize="100">
               <LayoutItem Id="ProposalForms" RelativeSize="100" />
             </LayoutGroup>
@@ -183,16 +204,19 @@
               <LayoutItem Id="ApprovalProcesses" RelativeSize="100" />
             </LayoutGroup>
           </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="28.95805142083897" Caption="Nội Dung" Removed="True">
+            <LayoutItem Id="Content" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
     <ListView Id="TemplateForm_ProposalForms_ListView">
       <Columns>
-        <ColumnInfo Id="Name" Width="144" />
-        <ColumnInfo Id="Date" Width="123" />
-        <ColumnInfo Id="Status" Width="76" />
-        <ColumnInfo Id="State" Width="103" />
-        <ColumnInfo Id="employee" Width="125" />
+        <ColumnInfo Id="Name" Width="96" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Date" Width="112" />
+        <ColumnInfo Id="Status" Width="83" />
+        <ColumnInfo Id="State" Width="102" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="employee" Width="0" />
       </Columns>
     </ListView>
   </Views>

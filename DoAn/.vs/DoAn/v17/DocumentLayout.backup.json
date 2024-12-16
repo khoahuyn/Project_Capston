@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\DevExperss\\DoAn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\controllers\\proposalformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\controllers\\proposalformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\businessobjects\\class\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\businessobjects\\class\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\businessobjects\\class\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\businessobjects\\class\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\businessobjects\\class\\approvalprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\businessobjects\\class\\approvalprocess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\model.designeddiffs.xafml||{4DD02038-D78C-4AD3-8B8D-13FC109B2DCD}",
+      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\model.designeddiffs.xafml||{4DD02038-D78C-4AD3-8B8D-13FC109B2DCD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\businessobjects\\class\\proposalform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\businessobjects\\class\\proposalform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\businessobjects\\class\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\businessobjects\\class\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,68 +46,40 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProposalForm.cs",
+              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
+              "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
+              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
+              "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAmwI0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T10:40:42.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Employee.cs",
               "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\Employee.cs",
               "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\Employee.cs",
               "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\Employee.cs",
               "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\Employee.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwIUAAABtAAAAAAAAAA==",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T07:00:32.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Branch.cs",
-              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\Branch.cs",
-              "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\Branch.cs",
-              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\Branch.cs",
-              "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\Branch.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T06:54:32.058Z",
+              "WhenOpened": "2024-12-16T10:40:39.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProposalFormController.cs",
-              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\Controllers\\ProposalFormController.cs",
-              "RelativeDocumentMoniker": "DoAn.Module\\Controllers\\ProposalFormController.cs",
-              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\Controllers\\ProposalFormController.cs",
-              "RelativeToolTip": "DoAn.Module\\Controllers\\ProposalFormController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T05:39:35.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApprovalProcess.cs",
-              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ApprovalProcess.cs",
-              "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\ApprovalProcess.cs",
-              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ApprovalProcess.cs",
-              "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\ApprovalProcess.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwDcAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T06:32:16.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProposalForm.cs",
-              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
-              "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
-              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
-              "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAqwJ8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T08:23:19.542Z",
-              "EditorCaption": ""
+              "Title": "Model.DesignedDiffs.xafml",
+              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\Model.DesignedDiffs.xafml",
+              "RelativeDocumentMoniker": "DoAn.Module\\Model.DesignedDiffs.xafml",
+              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\Model.DesignedDiffs.xafml*",
+              "RelativeToolTip": "DoAn.Module\\Model.DesignedDiffs.xafml*",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARsSURBVDhPrZTNb1RlFMaf8957587MnZlOO\u002B2U0hawpXEaEj4iagzRDcRoTPwHWGBcs9aNYWvQYGLCUuPCxIVBAU2M2ES0UKAtHy0tYGGY0jKdudP5Zj7uve\u002B97/u6IDWxLPWXnM2TPL/kJCcH\u002BD9RSm2P/jO0Pdji5MmJ2MvjkVEILwPpTYBYGyxyD5qxspJtbZ49\u002B1hu72C7cGwgrh/JDFqqPxj86NSu/fsmjUPkO4cg3AyItaBbi1KF528tOXc\u002B/nx1hUdU69H1mlfOdf9ZlTJpi0AUhoL1/sHR1KfHXxkT\u002Bzuv0VDxPbI6GSIZI6UgAQQ\u002BwWkbhUIneu1uOHmus0Plzp1aKS5cLDV9VzrVdUdQ8/SxkNIjh\u002BD7Rw3feTMMnhE9vFftdcK0F4Y2REQhgtcA8msCjxuBXIvAa7xk1skyCrqwruhB9Pf8QvvmZ\u002B9cK5H64uiXivODCIIRCD\u002BplLIUg45IQDLFKRjkeDbIcL/J8TRBqPcyOHFNChOCFHHG9LqhhTZEV7\u002BXv8l/o8Ynr65HdZnWNAoRFJRSkJyj2VWw9RhKgyOojO9BjjbhjD4EDZVhxAU0zQAkgQgIPHC3TKVGVpvWPsz0nGEMGmMMAYC2D9iegQdqBIvGYdy1jiFrHUU5NA5umCBIMMWhGQEYI/AWUFv1tfwtV8vNtAO6fjwjYiEgGddIaDrWuYUlYxK50bdR3/kGeGIEpABSgCarMELzCCemEN8xA91ooLTsYn3Wx\u002BaKaFKgzdHsiX0dTfgmAo\u002BthYYxt/NdlA9/AMSSIJiA0IGtoyABYhxKrMPv/grpfYPigo1GPgAjo9qT6J1iZJgVIZUvpIQnGepcQ6XehdfhIKmg6Xg\u002BJkAUoFUsIn9rGU9v5NCyffAuIIWEphEf6E3nWTiVPs/MyBMicpj0wdwWnIqNTnEdTq0E4XVALABvlVHL3oa98AfK92fRrRYQOD6kVDB0s5pMpBaG\u002BoevaK9P7in0hPWooYJ4W\u002BqxAg2YxegoAqcNGXBACkjfQS27CHvpKmq5e/C7ZVj9jjLjJSEd2GGzdzaRSp9XNf2SduF2rvTWgcziUNKSrqT0hugZKCQzGkFB\u002BpzcRgX1tQfIz0/BqRUghYQeZtJKOUHYqtVj6Lto9u/4qgpx8cLpS64GAHM52x0d6M2NTUzetxPjnVUaPKAkdMYYqYDDqRXg1otQUFCSYBhaY8\u002Bu/hu7hq0zy5fXfpj/aeVB/uaG73d9aADQcn1lt1znznq1smw37b7MESiFfqUQk4HP/E4D3WYJSgqEDL2YTvVOT\u002Bwe\u002BXr20szMo4WnG8/KHdfv\u002BgDwXAgA9jNHZe2qV67VqqYZtlOptAxFohGP\u002B3GvXTfd5qawIuGHyb7YlGmqH6u5x5fn/5yvtertYMvxL\u002BEWAXeD4l9z\u002BeGR3U8SqcFAMS3pdhpRuM1CVBPnjFDwXaWyNn315wuuz70XPvQLwi1Wl67X4n2ph2OTB/OG4Hp/lH27dPWX7\u002B9OT63Y2ewLoi3\u002BBkcBZF0LtPhlAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-12-16T09:52:39.458Z"
             }
           ]
         },

@@ -87,14 +87,16 @@ namespace DoAn.Module.BusinessObjects.Class
         }
 
 
-        private Employee _employee;
-        [XafDisplayName("Người Lập")]
+        private Execute _execute;
+        [XafDisplayName("Xử Lý Sau Duyệt")]
         [Association]
-        public Employee employee
+        public Execute execute
         {
-            get { return _employee; }
-            set { SetPropertyValue<Employee>(nameof(employee), ref _employee, value); }
+            get { return _execute; }
+            set { SetPropertyValue<Execute>(nameof(execute), ref _execute, value); }
         }
+
+
 
         [Association]
         public XPCollection<ProposalForm> ProposalForms

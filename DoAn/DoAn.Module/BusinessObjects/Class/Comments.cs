@@ -17,6 +17,7 @@ namespace DoAn.Module.BusinessObjects.Class
     [DefaultClassOptions]
     [System.ComponentModel.DisplayName("Bình Luận")]
     [NavigationItem(false)]
+    [DeferredDeletion(false)]
     [ImageName("comment")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
@@ -51,7 +52,6 @@ namespace DoAn.Module.BusinessObjects.Class
         }
 
 
-
         private ProposalForm _proposalform;
         [XafDisplayName("Phiếu Đề Xuất")]
         [Association]
@@ -60,11 +60,6 @@ namespace DoAn.Module.BusinessObjects.Class
             get { return _proposalform; }
             set { SetPropertyValue<ProposalForm>(nameof(proposalform), ref _proposalform, value); }
         }
-
-
-
-
-
 
     }
 }

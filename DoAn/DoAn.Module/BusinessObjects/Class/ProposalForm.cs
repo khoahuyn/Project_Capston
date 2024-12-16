@@ -139,7 +139,7 @@ namespace DoAn.Module.BusinessObjects.Class
 
 
         private Employee _employee;
-        [XafDisplayName("Nhân Sự")]
+        [XafDisplayName("Người Lập")]
         [Association]
         public Employee employee
         {

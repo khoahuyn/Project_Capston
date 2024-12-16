@@ -33,7 +33,6 @@ namespace DoAn.Module.BusinessObjects.Class
 
         private TemplateForm _templateform;
         [XafDisplayName("Mẫu Sử Dụng")]
-
         [Association]
         public TemplateForm templateform
         {
