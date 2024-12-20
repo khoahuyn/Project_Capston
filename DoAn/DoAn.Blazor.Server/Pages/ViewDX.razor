@@ -1,0 +1,107 @@
+﻿@using DevExpress.Blazor.RichEdit
+@using DevExpress.Blazor.Office;
+@using DoAn.Module.BusinessObjects.Class
+@using DoAn.Module
+@using DevExpress.Persistent.BaseImpl;
+@using DevExpress.ExpressApp;
+@using DevExpress.ExpressApp.Xpo;
+@using DevExpress.Xpo;
+@using DevExpress.Data.Filtering;
+
+
+@inject DevExpress.ExpressApp.IObjectSpaceFactory objectSpaceFactory
+@inject IJSRuntime jsRuntime
+
+<div class="row">
+    <div class="col">
+        <DxTextBox @bind-Text="@tendx" CssClass="my-textstyle"></DxTextBox>
+    </div>
+    <div class="col col-lg-2">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style=@($"width: {tyle}%;")
+                 aria-valuenow=@tyle aria-valuemin="0"
+                 aria-valuemax="100">
+                @tyle%
+            </div>
+        </div>
+    </div>
+</div>
+<DxTextBox @bind-Text="@thongtin" ReadOnly=true></DxTextBox>
+
+<div class="row">
+<DxRichEdit DocumentFormat="DocumentFormat.Rtf"
+            DocumentContent="@documentContent"
+                CustomizeRibbon=OnCustomizeRibbon
+            CssClass="w-100 ch-720"
+            ReadOnly=true/>
+</div>
+
+@code {
+    string tendx { get; set; }
+    string thongtin { get; set; }
+    byte[] documentContent;
+    int tyle { get; set; }
+    bool Daduyet { get; set; }
+    
+
+    protected override void OnInitialized()
+    {
+        LoadDulieu();
+    }
+
+    private void LoadDulieu()
+    {
+        Daduyet = false;
+        try
+        {
+            int phieuid = Define.GetUserIntValue("viewdx");
+            if (phieuid > 0)
+            {
+                IObjectSpace objectSpace = objectSpaceFactory.CreateObjectSpace(typeof(ProposalForm));
+                Session session = ((XPObjectSpace)objectSpace).Session;
+                ProposalForm phieudexuat = objectSpace.FindObject<ProposalForm>(CriteriaOperator.Parse("Oid=?", phieuid));
+                // if (phieudexuat != null)
+                // {
+                //     if (phieudexuat.Trangthai == TCom.EStatusVB.daduyet)
+                //         Daduyet = true;
+
+                //     int landuyet = 0;
+                //     foreach (DuyetDexuat d in phieudexuat.DuyetDexuats)
+                //     {
+                //         if (d.Trangthai == TCom.EStatusDuyet.daduyet)
+                //             landuyet++;
+                //     }
+                //     string buocduyet = " - Đã duyệt: " + landuyet + "/" + phieudexuat.DuyetDexuats.Count;
+                //     string xuly = " @ Xử lý sau duyệt: ";
+                //     if (phieudexuat.NguoiXuly != null)
+                //     {
+                //         xuly += phieudexuat.NguoiXuly.HoTen + " - Hoàn thành: ";
+                //         if (phieudexuat.Ngayxong != DateTime.MinValue)
+                //             xuly += phieudexuat.Ngayxong.ToShortDateString();
+                //     }
+                //     tendx = phieudexuat.TenDexuat;
+                //     thongtin = "Số: " + phieudexuat.Oid.ToString() + ", ngày: " + phieudexuat.Ngay.ToString("dd/MM/yyyy HH:mm") + ", Người lập: " + phieudexuat.Nhanvien.HoTen + xuly;
+                //     documentContent = System.Text.Encoding.ASCII.GetBytes(phieudexuat.Noidung);
+                //     tyle = phieudexuat.TyleDuyet;
+                // }
+            }
+        }
+        catch (Exception ex)
+        {
+            Define.CustomError(ex.Message);
+        }
+    }
+    void OnCustomizeRibbon(IRibbon model)
+    {
+        RibbonTabCollection tabs = model.Tabs;
+        tabs.Remove(RichEditRibbonTabNames.File);
+        tabs.Remove(RichEditRibbonTabNames.Home);
+        tabs.Remove(RichEditRibbonTabNames.Insert);
+        tabs.Remove(RichEditRibbonTabNames.PageLayout);
+
+        tabs.Remove(RichEditRibbonTabNames.MailMerge);
+        tabs.Remove(RichEditRibbonTabNames.References);
+        tabs.Remove(RichEditRibbonTabNames.TableDesign);
+        tabs.Remove(RichEditRibbonTabNames.TableLayout);
+    }
+}

@@ -6,6 +6,7 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
+using DoAn.Module.BusinessObjects.Authentication;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,9 +44,9 @@ namespace DoAn.Module.BusinessObjects.Class
         [Association, Browsable(false)]
         [RuleRequiredField(DefaultContexts.Delete, InvertResult = true, CustomMessageTemplate = "'{TargetPropertyName}' có dữ liệu. Không xóa được!")]
 
-        public XPCollection<Employee> Employees
+        public XPCollection<ApplicationUser> Users
         {
-            get { return GetCollection<Employee>(nameof(Employees)); }
+            get { return GetCollection<ApplicationUser>(nameof(Users)); }
         }
 
 
@@ -55,6 +56,14 @@ namespace DoAn.Module.BusinessObjects.Class
         public XPCollection<Department> Departments
         {
             get { return GetCollection<Department>(nameof(Departments)); }
+        }
+
+        [Association]
+        [XafDisplayName("Phiếu đề xuất"), Browsable(false)]
+        [RuleRequiredField(DefaultContexts.Delete, InvertResult = true, CustomMessageTemplate = "'{TargetPropertyName}' có dữ liệu. Không xóa được!")]
+        public XPCollection<ProposalForm> ProposalForms
+        {
+            get { return GetCollection<ProposalForm>(nameof(ProposalForms)); }
         }
     }
 }

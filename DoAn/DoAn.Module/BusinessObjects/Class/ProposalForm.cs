@@ -8,6 +8,7 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
+using DoAn.Module.BusinessObjects.Authentication;
 using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Collections.Generic;
@@ -32,7 +33,7 @@ namespace DoAn.Module.BusinessObjects.Class
         FontColor = "Red", FontStyle = DevExpress.Drawing.DXFontStyle.Bold, Priority = 1)]
     [Appearance("ColorDetailViewNhap2", AppearanceItemType = "LayoutItem", TargetItems = "CS", Criteria = "1=1", Context = "DetailView",
         FontColor = "Red", FontStyle = DevExpress.Drawing.DXFontStyle.Bold, Priority = 1)]
-    [Appearance("ColorDetailViewNhap3", AppearanceItemType = "LayoutItem", TargetItems = "Mau", Criteria = "1=1", Context = "DetailView",
+    [Appearance("ColorDetailViewNhap3", AppearanceItemType = "LayoutItem", TargetItems = "templateform", Criteria = "1=1", Context = "DetailView",
         FontColor = "Red", FontStyle = DevExpress.Drawing.DXFontStyle.Bold, Priority = 1)]
     public class ProposalForm(Session session) : BaseObject(session)
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
@@ -40,6 +41,19 @@ namespace DoAn.Module.BusinessObjects.Class
         {
             base.AfterConstruction();
             // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            if (Session.IsNewObject(this))
+            {
+                Date = Define.GetServerDateTime();
+                ApplicationUser ns = Define.GetCurrentNhanvien();
+                if (ns != null)
+                {
+                    user = Session.GetObjectByKey<ApplicationUser>(ns.Oid);
+                    if (ns.CS != null)
+                        CS = Session.GetObjectByKey<Branch>(ns.CS.Oid);
+                    if (ns.Donvi != null)
+                        Donvi = Session.GetObjectByKey<Department>(ns.Donvi.Oid);
+                }
+            }
         }
 
         protected override void OnSaving()
@@ -47,13 +61,13 @@ namespace DoAn.Module.BusinessObjects.Class
             base.OnSaving();
             if (string.IsNullOrEmpty(Name))
             {
-                if (templateform != null)
+                if (templateform != null && user !=null)
                 {
                     Name = templateform.FormName;
                 }
 
             }
-            //UpdateTrangthai();
+            //UpdateTrangthai();user != null && 
         }
 
         private DateTime _Date;
@@ -98,7 +112,7 @@ namespace DoAn.Module.BusinessObjects.Class
         }
 
         private string _Content;
-        [XafDisplayName("Nội Dung")]
+        [XafDisplayName("Nội Dung")]    
         //[RuleRequiredField(DefaultContexts.Save, CustomMessageTemplate = "'Nội dung' không được để trống!")]
         [Size(SizeAttribute.Unlimited)]
         [EditorAlias(EditorAliases.RichTextPropertyEditor)]
@@ -137,23 +151,69 @@ namespace DoAn.Module.BusinessObjects.Class
             get { return GetCollection<Comments>(nameof(Comments)); }
         }
 
-
-        private Employee _employee;
+        private ApplicationUser _user;
         [XafDisplayName("Người Lập")]
+        [RuleRequiredField("Yeucau Nhanvien", DefaultContexts.Save, "Phải có người lập phiếu")]
         [Association]
-        public Employee employee
+        public ApplicationUser user
         {
-            get { return _employee; }
-            set { SetPropertyValue<Employee>(nameof(employee), ref _employee, value); }
+            get { return _user; }
+            set { SetPropertyValue<ApplicationUser>(nameof(user), ref _user, value); }
         }
 
+
+        private bool _IsCoso = false;
+        [ImmediatePostData, Browsable(false)]
+        public bool IsCoso
+        {
+            get { return _IsCoso; }
+            set { SetPropertyValue<bool>(nameof(IsCoso), ref _IsCoso, value); }
+        }
+
+
+        private Branch _CS;
+        [XafDisplayName("Cơ Sở (*)")]
+        //[RuleRequiredField(DefaultContexts.Save, CustomMessageTemplate = "'Cơ Sở' không được để trống!")]
+        [Appearance("cs", Visibility = ViewItemVisibility.Hide, Criteria = "!IsCoso", Context = "DetailView")]
+        [Association]
+        public Branch CS
+        {
+            get { return _CS; }
+            set { SetPropertyValue<Branch>(nameof(CS), ref _CS, value); }
+        }
+
+
+        private Department _Donvi;
+        [XafDisplayName("Bộ Phận (*)")]
+        //[RuleRequiredField(DefaultContexts.Save, CustomMessageTemplate = "'Bộ Phận' không được để trống!")]
+        //[DataSourceCriteria("[Nhan] = true")]
+        [Appearance("bp", Visibility = ViewItemVisibility.Hide, Criteria = "IsCoso", Context = "DetailView")]
+        [Association]
+        public Department Donvi
+        {
+            get { return _Donvi; }
+            set { SetPropertyValue<Department>(nameof(Donvi), ref _Donvi, value); }
+        }
+
+        private bool _Thuchien = false;
+        [XafDisplayName("Thực hiện"), Browsable(false)]
+        public bool Thuchien
+        {
+            get { return _Thuchien; }
+            set
+            {
+                bool isModified = SetPropertyValue<bool>(nameof(Thuchien), ref _Thuchien, value);
+                if (isModified && !IsLoading && !IsSaving && !IsDeleted)
+                    RefreshMau();
+            }
+        }
 
 
         private TemplateForm _templateform;
         [XafDisplayName("Mẫu Đơn")]
         [Association]
         [RuleRequiredField("Yeucau mauphieu", DefaultContexts.Save, "Phải có mẫu đề xuất")]
-        [DataSourceProperty(nameof(DSMau))]
+        //[DataSourceProperty(nameof(DSMau))]
         public TemplateForm templateform
         {
             get { return _templateform; }
@@ -164,7 +224,7 @@ namespace DoAn.Module.BusinessObjects.Class
                 {
                     //IsCoso = value.ApdungCS;
                     //&& Nhanvien != null
-                    if (string.IsNullOrEmpty(Name)  && value != null)
+                    if (string.IsNullOrEmpty(Name) && user!=null && value != null)
                     {
                         Name = templateform.FormName;
                     }
@@ -182,10 +242,49 @@ namespace DoAn.Module.BusinessObjects.Class
                 if (ListMau == null)
                 {
                     ListMau = new XPCollection<TemplateForm>(Session);
-                    //RefreshMau();
+                    RefreshMau();
                 }
                 return ListMau;
             }
+        }
+
+        private void RefreshMau()
+        {
+            ListMau = new XPCollection<TemplateForm>(Session)
+            {
+                Criteria = CriteriaOperator.Parse("Oid=?", 0)
+            };
+            if (Thuchien)
+            {
+                ApplicationUser nv = Define.GetCurrentNhanvien();
+                if (nv != null && nv.Donvi != null)
+                {
+                    XPCollection<TemplateForm> Mauchon = new(Session)
+                    {
+                        Criteria = CriteriaOperator.Parse("Thuchien=? && Huy=?", true, false)
+                    };
+                    foreach (TemplateForm p in Mauchon)
+                    {
+                        ListMau.Add(p);
+                    }
+                }
+            }
+            else
+            {
+                ApplicationUser nv = Define.GetCurrentNhanvien();
+                if (nv != null && nv.Donvi != null)
+                {
+                    XPCollection<DepartmentForm> Mauchon = new(Session)
+                    {
+                        Criteria = CriteriaOperator.Parse("Donvi=? && Mau.Huy=?", Session.GetObjectByKey<Department>(nv.Donvi.Oid), false)
+                    };
+                    foreach (DepartmentForm p in Mauchon)
+                    {
+                        ListMau.Add(p.templateform);
+                    }
+                }
+            }
+
         }
 
     }

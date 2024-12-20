@@ -3,6 +3,7 @@ using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
 using DevExpress.ExpressApp.SystemModule;
+using DoAn.Module.BusinessObjects.Authentication;
 using DoAn.Module.BusinessObjects.Class;
 using DoAn.Module.BusinessObjects.Import;
 using System;
@@ -17,13 +18,13 @@ namespace DoAn.Module.Controllers
     {
         public EmployeeDataController()
         {
-            TargetViewId = "Employee_ListView";
+            TargetViewId = "ApplicationUser_ListView";
             SimpleAction Data = new(this, "data", "View")
             {
                 Caption = "Import File",
                 ImageName = "import",
                 ConfirmationMessage = "Bạn có muốn cập nhật dữ liệu từ file ?",
-                TargetViewId = "Employee_ListView"
+                TargetViewId = "ApplicationUser_ListView"
             };
             Data.Execute += Data_Execute;
         }
@@ -98,7 +99,7 @@ namespace DoAn.Module.Controllers
         }
         private void StoreData_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
-            IObjectSpace objectSpace=Application.CreateObjectSpace(typeof(Employee));
+            IObjectSpace objectSpace=Application.CreateObjectSpace(typeof(ApplicationUser));
             foreach (ClsEmployee dong in imp.ImportEmployees) 
             {
                 string numid = dong.EmployeeId;
@@ -106,10 +107,10 @@ namespace DoAn.Module.Controllers
                 string phone=dong.PhoneNumber;
                 string sex=dong.Gender;
                 string mail=dong.Email;
-                Employee employee = objectSpace.FindObject<Employee>(CriteriaOperator.Parse("EmployeeId=?", numid));
+                ApplicationUser employee = objectSpace.FindObject<ApplicationUser>(CriteriaOperator.Parse("EmployeeId=?", numid));
                 if (employee == null) 
                 {
-                    employee = objectSpace.CreateObject<Employee>();
+                    employee = objectSpace.CreateObject<ApplicationUser>();
                     employee.EmployeeId = numid;
                     employee.Name = tenns;
                     employee.PhoneNumber = phone;

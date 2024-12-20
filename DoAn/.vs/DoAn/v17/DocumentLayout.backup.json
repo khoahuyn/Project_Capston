@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\DevExperss\\DoAn\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\model.designeddiffs.xafml||{4DD02038-D78C-4AD3-8B8D-13FC109B2DCD}",
-      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\model.designeddiffs.xafml||{4DD02038-D78C-4AD3-8B8D-13FC109B2DCD}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\businessobjects\\class\\proposalform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\businessobjects\\class\\proposalform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\businessobjects\\class\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\businessobjects\\class\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|d:\\devexperss\\doan\\doan.module\\businessobjects\\class\\define.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48BA0BC4-3678-48DB-A120-306EC5229992}|DoAn.Module\\DoAn.Module.csproj|solutionrelative:doan.module\\businessobjects\\class\\define.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D742E1E6-48F2-410C-882C-698A22516F22}|DoAn.Blazor.Server\\DoAn.Blazor.Server.csproj|d:\\devexperss\\doan\\doan.blazor.server\\controllers\\blazorproposalformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D742E1E6-48F2-410C-882C-698A22516F22}|DoAn.Blazor.Server\\DoAn.Blazor.Server.csproj|solutionrelative:doan.blazor.server\\controllers\\blazorproposalformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D742E1E6-48F2-410C-882C-698A22516F22}|DoAn.Blazor.Server\\DoAn.Blazor.Server.csproj|d:\\devexperss\\doan\\doan.blazor.server\\pages\\viewdx.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D742E1E6-48F2-410C-882C-698A22516F22}|DoAn.Blazor.Server\\DoAn.Blazor.Server.csproj|solutionrelative:doan.blazor.server\\pages\\viewdx.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,40 +50,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProposalForm.cs",
-              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
-              "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
-              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
-              "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAmwI0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T10:40:42.045Z",
+              "DocumentIndex": 3,
+              "Title": "ViewDX.razor",
+              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Blazor.Server\\Pages\\ViewDX.razor",
+              "RelativeDocumentMoniker": "DoAn.Blazor.Server\\Pages\\ViewDX.razor",
+              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Blazor.Server\\Pages\\ViewDX.razor",
+              "RelativeToolTip": "DoAn.Blazor.Server\\Pages\\ViewDX.razor",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-18T13:35:15.727Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Employee.cs",
-              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\Employee.cs",
-              "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\Employee.cs",
-              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\Employee.cs",
-              "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\Employee.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Define.cs",
+              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\Define.cs",
+              "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\Define.cs",
+              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\Define.cs",
+              "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\Define.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEQAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T10:40:39.585Z",
+              "WhenOpened": "2024-12-18T04:37:46.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Model.DesignedDiffs.xafml",
-              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\Model.DesignedDiffs.xafml",
-              "RelativeDocumentMoniker": "DoAn.Module\\Model.DesignedDiffs.xafml",
-              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\Model.DesignedDiffs.xafml*",
-              "RelativeToolTip": "DoAn.Module\\Model.DesignedDiffs.xafml*",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARsSURBVDhPrZTNb1RlFMaf8957587MnZlOO\u002B2U0hawpXEaEj4iagzRDcRoTPwHWGBcs9aNYWvQYGLCUuPCxIVBAU2M2ES0UKAtHy0tYGGY0jKdudP5Zj7uve\u002B97/u6IDWxLPWXnM2TPL/kJCcH\u002BD9RSm2P/jO0Pdji5MmJ2MvjkVEILwPpTYBYGyxyD5qxspJtbZ49\u002B1hu72C7cGwgrh/JDFqqPxj86NSu/fsmjUPkO4cg3AyItaBbi1KF528tOXc\u002B/nx1hUdU69H1mlfOdf9ZlTJpi0AUhoL1/sHR1KfHXxkT\u002Bzuv0VDxPbI6GSIZI6UgAQQ\u002BwWkbhUIneu1uOHmus0Plzp1aKS5cLDV9VzrVdUdQ8/SxkNIjh\u002BD7Rw3feTMMnhE9vFftdcK0F4Y2REQhgtcA8msCjxuBXIvAa7xk1skyCrqwruhB9Pf8QvvmZ\u002B9cK5H64uiXivODCIIRCD\u002BplLIUg45IQDLFKRjkeDbIcL/J8TRBqPcyOHFNChOCFHHG9LqhhTZEV7\u002BXv8l/o8Ynr65HdZnWNAoRFJRSkJyj2VWw9RhKgyOojO9BjjbhjD4EDZVhxAU0zQAkgQgIPHC3TKVGVpvWPsz0nGEMGmMMAYC2D9iegQdqBIvGYdy1jiFrHUU5NA5umCBIMMWhGQEYI/AWUFv1tfwtV8vNtAO6fjwjYiEgGddIaDrWuYUlYxK50bdR3/kGeGIEpABSgCarMELzCCemEN8xA91ooLTsYn3Wx\u002BaKaFKgzdHsiX0dTfgmAo\u002BthYYxt/NdlA9/AMSSIJiA0IGtoyABYhxKrMPv/grpfYPigo1GPgAjo9qT6J1iZJgVIZUvpIQnGepcQ6XehdfhIKmg6Xg\u002BJkAUoFUsIn9rGU9v5NCyffAuIIWEphEf6E3nWTiVPs/MyBMicpj0wdwWnIqNTnEdTq0E4XVALABvlVHL3oa98AfK92fRrRYQOD6kVDB0s5pMpBaG\u002BoevaK9P7in0hPWooYJ4W\u002BqxAg2YxegoAqcNGXBACkjfQS27CHvpKmq5e/C7ZVj9jjLjJSEd2GGzdzaRSp9XNf2SduF2rvTWgcziUNKSrqT0hugZKCQzGkFB\u002BpzcRgX1tQfIz0/BqRUghYQeZtJKOUHYqtVj6Lto9u/4qgpx8cLpS64GAHM52x0d6M2NTUzetxPjnVUaPKAkdMYYqYDDqRXg1otQUFCSYBhaY8\u002Bu/hu7hq0zy5fXfpj/aeVB/uaG73d9aADQcn1lt1znznq1smw37b7MESiFfqUQk4HP/E4D3WYJSgqEDL2YTvVOT\u002Bwe\u002BXr20szMo4WnG8/KHdfv\u002BgDwXAgA9jNHZe2qV67VqqYZtlOptAxFohGP\u002B3GvXTfd5qawIuGHyb7YlGmqH6u5x5fn/5yvtertYMvxL\u002BEWAXeD4l9z\u002BeGR3U8SqcFAMS3pdhpRuM1CVBPnjFDwXaWyNn315wuuz70XPvQLwi1Wl67X4n2ph2OTB/OG4Hp/lH27dPWX7\u002B9OT63Y2ewLoi3\u002BBkcBZF0LtPhlAAAAAElFTkSuQmCC",
-              "WhenOpened": "2024-12-16T09:52:39.458Z"
+              "Title": "ProposalForm.cs",
+              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
+              "RelativeDocumentMoniker": "DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
+              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
+              "RelativeToolTip": "DoAn.Module\\BusinessObjects\\Class\\ProposalForm.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAhwBgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T03:27:41.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BlazorProposalFormController.cs",
+              "DocumentMoniker": "D:\\DevExperss\\DoAn\\DoAn.Blazor.Server\\Controllers\\BlazorProposalFormController.cs",
+              "RelativeDocumentMoniker": "DoAn.Blazor.Server\\Controllers\\BlazorProposalFormController.cs",
+              "ToolTip": "D:\\DevExperss\\DoAn\\DoAn.Blazor.Server\\Controllers\\BlazorProposalFormController.cs",
+              "RelativeToolTip": "DoAn.Blazor.Server\\Controllers\\BlazorProposalFormController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAtwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T16:04:52.341Z",
+              "EditorCaption": ""
             }
           ]
         },

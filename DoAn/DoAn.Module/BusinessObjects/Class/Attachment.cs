@@ -6,6 +6,7 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
+using DoAn.Module.BusinessObjects.Authentication;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,16 +51,14 @@ namespace DoAn.Module.BusinessObjects.Class
             set { SetPropertyValue<FileData>(nameof(File), ref _File, value); }
         }
 
-
-        private Employee _employee;
+        private ApplicationUser _user;
         [XafDisplayName("Nhân Sự")]
         [Association]
-        public Employee employee
+        public ApplicationUser user
         {
-            get { return _employee; }
-            set { SetPropertyValue<Employee>(nameof(employee), ref _employee, value); }
+            get { return _user; }
+            set { SetPropertyValue<ApplicationUser>(nameof(user), ref _user, value); }
         }
-
 
         private ProposalForm _proposalform;
         [XafDisplayName("Phiếu Đề Xuất")]
